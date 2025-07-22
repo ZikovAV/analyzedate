@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Калькулятор Даты Рождения</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <header>
+          <h1 class="title">СИСТЕМА АНАЛИЗА ДАТЫ</h1>
+        </header>
+
+        <div class="main-panel">
+          <div class="input-section">
+            <h2>ВВОД ДАННЫХ</h2>
+            
+            <div class="input-group">
+              <label for="day">ДЕНЬ</label>
+              <input type="number" id="day" min="1" max="31" placeholder="дд">
+            </div>
+
+            <div class="input-group">
+              <label for="month">МЕСЯЦ</label>
+              <input type="number" id="month" min="1" max="12" placeholder="мм">
+            </div>
+
+            <div class="input-group">
+              <label for="year">ГОД</label>
+              <input type="number" id="year" min="1900" max="2024" placeholder="гггг">
+            </div>
+
+            <button id="calculate-btn" class="calculate-btn">
+              ПРОАНАЛИЗИРОВАТЬ
+            </button>
+          </div>
+
+          <div class="results-section" id="results">
+            <h2>РЕЗУЛЬТАТЫ АНАЛИЗА</h2>
+            <div class="result-panel">
+              <div id="age-display" class="result-item"></div>
+              <div id="weekday-display" class="result-item"></div>
+              <div id="leap-year-display" class="result-item"></div>
+              <div id="ascii-display" class="ascii-art"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="console-panel">
+          <div class="console-header">СИСТЕМНАЯ КОНСОЛЬ</div>
+          <div class="console-content" id="console-output">
+            <div class="console-line">&gt; Система готова к работе...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
